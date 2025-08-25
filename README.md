@@ -1,4 +1,4 @@
-<div align="center">
+<div>
   <img src="https://i.imgur.com/3Vbzw56.png" />
 </div>
 <h2 align="center" id="pinpoint">The Future of Banking, Mapped for You</h2>
@@ -7,8 +7,8 @@
   <a href="https://juandergo.aratilismk.com/">
     <img src="https://img.shields.io/badge/-📍%20PinPoint-maroon?style=for-the-badge" alt="PinPoint" />
   </a>
-  <a href="https://www.canva.com/design/DAGrKXZZjW8/zDj54wt_vRTjQIb-dyHWag/edit?utm_content=DAGrKXZZjW8&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton">
-    <img src="https://img.shields.io/badge/-📊%20FPitch%20Deck-gold?style=for-the-badge" alt="Final Pitch Deck" />
+  <a href="https://www.canva.com/design/DAGw-uexZzo/Q5nBn2KkSMCg6PWsHWlg_Q/edit?fbclid=IwY2xjawMZTTNleHRuA2FlbQIxMQABHhgOrkz-EJ9nvr1iCIGcevqiDvREcgcTkmbU_ZhjuX3jISVLY9GDu2Z4zgk-_aem_g_SkdNZJxn36IaDneFHnAA">
+    <img src="https://img.shields.io/badge/-📊%20Pitch%20Deck-gold?style=for-the-badge" alt="Final Pitch Deck" />
   </a>
 </p>
 
@@ -35,7 +35,7 @@
 
 <!-- PinPoint Overview Image -->
 <p align="center">
-  <img src="https://i.imgur.com/nXHfxIH.png" alt="PinPoint Overview" width="100%"/>
+  <img src="https://i.imgur.com/LZv4EsL.png" alt="PinPoint Overview" width="100%"/>
 </p>
 
 <!-- Project Description -->
@@ -130,7 +130,7 @@ PinPoint’s accuracy and reliability depend on high-quality, diverse datasets t
 
 <h3> 🗺️ Data Sources </h3>
 <p align="center">
-  <img src="https://i.imgur.com/mS9BPgR.png" alt="PinPoint Data Sources" width="100%"/>
+  <img src="https://i.imgur.com/j1NYozv.png" alt="PinPoint Data Sources" width="100%"/>
 </p>
 
 ### 📍 Branch Location Data  
@@ -160,8 +160,13 @@ PinPoint’s accuracy and reliability depend on high-quality, diverse datasets t
 
 ### 🏦 Bank Product & Competitor Data  
 - **Source:** BPI, BDO, Metrobank, Landbank, and UnionBank  
-- **Coverage:** Bank products, lending rates, deposit offers, promotions, and digital banking services.  
-- **Purpose:** Enables competitive analysis of financial products, ensuring recommendations factor in both customer needs and competitor positioning.  
+- **Coverage:** Bank products, lending rates, deposit offers, promotions, and digital banking services. 
+- **Purpose:** Enables competitive analysis of financial products, ensuring recommendations factor in both customer needs and competitor positioning.
+
+### 📊 MSME Data  
+- **Source:** Department of Trade and Industries (DTI)  
+- **Process:** Data on micro, small, and medium enterprises (MSMEs) is collected from DTI records, cleaned to remove duplicates and inconsistencies, and aggregated by region, city, and sector.  
+- **Purpose:** Provides a detailed overview of MSME distribution and sectoral composition, enabling targeted economic analysis, local business support, and strategic planning for regional development.
 
 <!-- Data Acquisition and Storage Architecture -->
 <h3> 🧩 Data Acquisition </h3> 
@@ -179,33 +184,26 @@ Branch location data was collected using the **Google Maps Places API**. To ensu
 
 Because the **Google Maps Details API** does not filter for the most recent reviews, **BPI branch reviews were additionally web-scraped** to capture recent feedback. After collecting the data, Excel’s `VLOOKUP` function was used to assign **regions** to provinces for banks that did not provide region information. The same keyword-based approach was applied in reverse for other financial institutions to avoid duplicating previously collected data.
 
-<img src="https://i.imgur.com/3CMYsm5.png"/>
-
 ### Demographic and Economic Data
 Demographic and economic data were primarily sourced from the **Philippine Statistics Authority (PSA)** website. This included indicators such as **GDP, GDP growth, poverty rate, annual LGU income, population distribution**, and other relevant statistics.
-
-<img src="https://i.imgur.com/3CMYsm5.png"/>
 
 ### OFW Data
 Data related to overseas Filipino workers (OFWs) were collected from official sources. The **Department of Migrant Workers** provided information on the number and distribution of OFWs, while **OFW remittance data** was obtained from the **Bangko Sentral ng Pilipinas (BSP)**.
 
-<img src="https://i.imgur.com/3CMYsm5.png"/>
-
 ### Wealth Indicators
 Wealth indicators were gathered using multiple approaches. The **Google Maps API** was used to locate condos, casinos, and hotels. International schools, major malls, and retail hubs were identified through **manual research**, while car showroom locations were obtained from the **Philkotse website**.
-
-<img src="https://i.imgur.com/3CMYsm5.png"/>
 
 ### Bank Product Data
 Manual research was conducted on the official websites of **BPI, BDO, Metrobank, LandBank, and UnionBank** to collect data on their financial products, ensuring comprehensive coverage of offerings such as loans, deposits, and credit services.
 
-<img src="https://i.imgur.com/3CMYsm5.png"/>
+### MSME Data  
+The official website of the **Department of Trade and Industry (DTI)** was used to download MSME datasets in Excel format, providing a comprehensive overview of registered micro, small, and medium enterprises across the Philippines.
 
 ---
 
 <h2 id="feature-highlights">✨ Feature Highlights </h2>
 
-<img src = "https://i.imgur.com/MUOmaK0.png" width="100%">
+<img src = "https://i.imgur.com/3pz6sPO.png" width="100%">
 
 <p align="justify" style="font-size: 16px; line-height: 1.6;">
 This section showcases PinPoint’s key features that work together to provide data-driven insights for branch placement. From precise location mapping to demographic and economic analysis, each component leverages AI and trusted datasets to guide smarter, evidence-based decisions.
@@ -221,8 +219,16 @@ These include: <strong>Hero Products</strong> that identify which BPI offerings 
   PinPoint’s Hero Products feature identifies which BPI offerings, such as loans, deposits, or credit products, should be prioritized in specific branches or recommended locations. By aligning branch placement with the most relevant financial products, this feature ensures that customer demand is met with the right solutions in the right place.
 </p>
 
-<h4> Architecture </h4>
-<img src="https://i.imgur.com/lwi7jm2.png"/>
+<h4> User Guide </h4>
+<div style="text-align: center; margin-bottom: 20px;">
+  <img src="https://i.imgur.com/Iw0SSex.png" alt="Hero Products Step 1 & 2" style="max-width: 100%; height: auto;"/>
+  <p style="font-size: 14px; color: #555;">Step 1: Select Hero Products • Step 2: Set the filters</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="https://i.imgur.com/Si9nZez.png" alt="Hero Products Step 3" style="max-width: 100%; height: auto;"/>
+  <p style="font-size: 14px; color: #555;">Step 3: View the results</p>
+</div>
 
 <h3 id="#pop-up-strat">📍 POP UP STRATEGY </h3>
 
@@ -230,8 +236,21 @@ These include: <strong>Hero Products</strong> that identify which BPI offerings 
   PinPoint’s Pop-up Strategy feature helps BPI identify high-potential areas for temporary branches or kiosks. By analyzing customer demand, demographic trends, and economic activity, this feature allows BPI to extend its presence in underserved locations while reducing long-term operational risks. It supports agile expansion by meeting customer needs in areas where a full branch may not yet be viable.
 </p>
 
-<h4> Architecture </h4>
-<img src="https://i.imgur.com/lwi7jm2.png"/>
+<h4> User Guide </h4>
+<div style="text-align: center; margin-bottom: 20px;">
+  <img src="https://i.imgur.com/dE7LnlC.png" alt="Pop Up Strategy Step 1 & 2" style="max-width: 100%; height: auto;"/>
+  <p style="font-size: 14px; color: #555;">Step 1: Select Pop-up Strategy • Step 2: Set the filters</p>
+</div>
+
+<div style="text-align: center; margin-bottom: 20px;">
+  <img src="https://i.imgur.com/X7VHiQZ.png" alt="Pop Up Strategy Step 3" style="max-width: 100%; height: auto;"/>
+  <p style="font-size: 14px; color: #555;">Step 3: View the results</p>
+</div>
+
+<div style="text-align: center;">
+  <img src="https://i.imgur.com/rgbY5dk.png" alt="Pop Up Strategy Step 4" style="max-width: 100%; height: auto;"/>
+  <p style="font-size: 14px; color: #555;">Step 4: Scroll further down to see more results • Converse with AI for additional insights</p>
+</div>
 
 <h3 id="comp-analysis">🔍 COMPETITOR ANALYSIS </h3>
 
@@ -239,41 +258,18 @@ These include: <strong>Hero Products</strong> that identify which BPI offerings 
   PinPoint’s Competitor Analysis feature provides insights into the presence and density of rival banks in a given area. By comparing competitor branch locations, customer ratings, and service accessibility, this feature helps BPI identify strategic opportunities and potential gaps in the market. It supports smarter branch placement and ensures BPI can position itself where it delivers the most value and advantage over competitors.
 </p>
 
-<h4> Architecture </h4>
-<img src="https://i.imgur.com/lwi7jm2.png"/>
-
 <h4> User Guide </h4>
+<div style="text-align: center; margin-bottom: 20px;">
+  <img src="https://i.imgur.com/lkb27se.png" alt="Competitor Analysis Step 1 & 2" style="max-width: 100%; height: auto;"/>
+  <p style="font-size: 14px; color: #555;">Step 1: Select Competitor Analysis • Step 2: Set the filters</p>
+</div>
 
-<ol style="font-size: 16px; line-height: 1.6;">
-  <li><strong>Select Search</strong> – Begin by clicking on the search tab in the navigation panel.</li>
-  <li><strong>Select a Category</strong> – Choose what you want to search from a list of options like attractions, activities, accommodations, restaurants, travel agencies, tour guides, events, or facts and trivia.</li>
-  <li><strong>Select Search Technique</strong> – Choose from <em>Keyword</em>, <em>Semantic</em>, or <em>Hybrid</em> based on how you want the search to interpret your query.</li>
-  <li><strong>Enter Search Query</strong> – Type in your desired keyword, phrase, or topic to explore.</li>
-  <li><strong>View Results</strong> – The output will display a ranked list of relevant matches, each with a similarity score showing how closely it aligns with your query.</li>
-</ol>
-
-<p align="center">
-  <img src="https://i.imgur.com/GZrJsay.png" alt="Steps 1 to 3" width="80%" style="border-radius: 12px; margin-bottom: 10px;">
-  <br>
-  <em>Steps 1–3: Selecting search mode, category, and technique.</em>
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/ulypi1V.png" alt="Step 4 Input" width="80%" style="border-radius: 12px; margin-bottom: 10px;">
-  <br>
-  <em>Step 4: Typing in your search query.</em>
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/GZrJsay.png" alt="Step 5 Results" width="80%" style="border-radius: 12px;">
-  <br>
-  <em>Step 5: Viewing the ranked results with similarity scores.</em>
-</p>
-
+<div style="text-align: center;">
+  <img src="https://i.imgur.com/Si9nZez.png" alt="Competitor Analysis Step 3" style="max-width: 100%; height: auto;"/>
+  <p style="font-size: 14px; color: #555;">Step 3: View the competitor analysis results</p>
+</div>
 
 <h3 id="agentic-ai-agents">🤖 Agentic AI Agents</h3>
-
-<img src="https://i.imgur.com/zvOlYaK.png" alt="Agentic AI Agents" />
 
 PinPoint integrates a collaborative crew of 3 specialized agents, each designed to perform targeted tasks to collectively optimize branch operations and customer engagement. These agents simulate data-driven decision making to deliver actionable insights, including product prioritization, targeted promotional strategies, and competitive analysis for banking locations.
 
@@ -282,149 +278,6 @@ PinPoint integrates a collaborative crew of 3 specialized agents, each designed 
 | 1 | Hero Products Agent       | Identifies the most relevant banking products for each branch or region, helping prioritize offerings based on demand. |
 | 2 | Pop-Up Strategy Agent     | Provides insights for targeted promotions, campaigns, or branch activities to engage customers effectively.            |
 | 3 | Competitor Analysis Agent | Compares nearby branches of other banks along with the reviews to evaluate competitive positioning and inform strategic decisions.            |
-
-
-<h4> Flight Agent</h4>
-<p align="center">
-  <img src="https://i.imgur.com/9JmlxA5.png" alt="Flight Agent Result" width="70%" style="border-radius: 12px;" />
-  <br>
-  <em></em>
-</p>
-
-<h4> Weather Agent</h4>
-<p align="center">
-  <img src="https://i.imgur.com/Z73jajy.png" alt="Weather Agent Result" width="70%" style="border-radius: 12px;" />
-  <br>
-  <em></em>
-</p>
-
-<h4> Facts and Trivia Agent</h4>
-<p align="center">
-  <img src="https://i.imgur.com/s7gLeqL.png" alt="Facts and Trivia Result" width="70%" style="border-radius: 12px;" />
-  <br>
-  <em></em>
-</p>
-
-<h4> Events Agent</h4>
-<p align="center">
-  <img src="https://i.imgur.com/aOjchSC.png" alt="Event Agent Result" width="70%" style="border-radius: 12px;" />
-  <br>
-  <em></em>
-</p>
-
-<h4> Attractions & Activities Agent</h4>
-<p align="center">
-  <img src="https://i.imgur.com/idYQI3G.png" alt="Attractions & Activities Result" width="70%" style="border-radius: 12px;" />
-  <br>
-  <em></em>
-</p>
-
-<h4> Accommodation and Restaurant Agent</h4>
-<p align="center">
-  <img src="https://i.imgur.com/FBGE7cE.png" alt="Accommodation and Restaurant Agent Result" width="70%" style="border-radius: 12px;" />
-  <br>
-  <em></em>
-</p>
-
-<h4> Itinerary Agent</h4>
-<p align="center">
-  <img src="https://i.imgur.com/44eKbiO.png" alt="Itinerary Agent Result" width="70%" style="border-radius: 12px;" />
-  <br>
-  <em></em>
-</p>
-
-<!---
-<h4> Agents Behavior </h4>
---->
-
-<h4> Agent Architecture </h4>
-
-<p align="center">
-  <img src="https://i.imgur.com/jdrZWX3.png" alt="Flights Agent" width="70%" style="border-radius: 12px; margin-bottom: 8px;" />
-  <br>
-  <em><strong>Flights Agent</strong> – Identifies the nearest airport to your chosen destination and provides available routes.</em>
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/iouPEx3.png" alt="Weather Agent" width="70%" style="border-radius: 12px; margin-bottom: 8px;" />
-  <br>
-  <em><strong>Weather Agent</strong> – Fetches real-time weather or historical patterns to inform packing and travel decisions.</em>
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/pHwEeKT.png" alt="Events Agent" width="70%" style="border-radius: 12px; margin-bottom: 8px;" />
-  <br>
-  <em><strong>Events Agent</strong> – Highlights festivals, events, and local celebrations happening during your travel window.</em>
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/KSOfJl5.png" alt="Facts and Trivia Agent" width="70%" style="border-radius: 12px;" />
-  <br>
-  <em><strong>Facts and Trivia Agent</strong> – Shares cultural insights, fun facts, and helpful tips about your destination.</em>
-</p>
-
-<h4> User Guide </h4>
-
-<ol style="font-size: 16px; line-height: 1.6;">
-  <li><strong>Select Agents</strong> – Navigate to the Agents tab to access the agent interface.</li>
-  <li><strong>Input Required Fields</strong> – Fill in all necessary information such as destination, travel dates, interests, and preferences.</li>
-  <li><strong>Select Agent to Run</strong> – Choose which specific agent(s) to activate, depending on what information you want generated.</li>
-  <li><strong>Submit Request</strong> – Click the submit button to start the agent's execution process.</li>
-  <li><strong>Wait for Agent Execution</strong> – The agent will process the data and run background logic to generate tailored outputs.</li>
-  <li><strong>View and Download Results</strong> – Once complete, view the generated response and optionally download your itinerary or agent report.</li>
-</ol>
-
-<p align="center">
-  <img src="https://i.imgur.com/m7rLpja.png" alt="Steps 1 & 2 – Select agents and input details" width="80%" style="border-radius: 12px; margin-bottom: 10px;">
-  <br>
-  <em>Steps 1–2: Selecting agents and entering required fields.</em>
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/5eij9ks.png" alt="Steps 3 & 4 – Select and run agent" width="80%" style="border-radius: 12px; margin-bottom: 10px;">
-  <br>
-  <em>Steps 3–4: Choosing an agent and submitting the request.</em>
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/PFG90rZ.png" alt="Step 5 – Agent running" width="80%" style="border-radius: 12px; margin-bottom: 10px;">
-  <br>
-  <em>Step 5: Agent execution in progress.</em>
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/shbwwE4.png" alt="Step 6 – Results displayed" width="80%" style="border-radius: 12px;">
-  <br>
-  <em>Step 6: Viewing and downloading the result.</em>
-</p>
-
-<h3 id="chatbot">💬 Chatbot</h3>
-
-<h4> User Guide </h4>
-
-<ol style="font-size: 16px; line-height: 1.6;">
-  <li><strong>Select Chatbot</strong> – Navigate to the chatbot section in the app interface.</li>
-  <li><strong>Input Query</strong> – Type your question, travel concern, or request into the chat input field.</li>
-  <li><strong>Wait and See Results</strong> – The chatbot will process your query and return an intelligent response based on its trained data and connected tools.</li>
-</ol>
-
-<p align="center">
-  <img src="https://i.imgur.com/N0z110X.png" alt="Steps 1 & 2 – Select chatbot and input query" width="80%" style="border-radius: 12px; margin-bottom: 10px;">
-  <br>
-  <em>Steps 1–2: Accessing the chatbot and entering your question.</em>
-</p>
-
-<p align="center">
-  <img src="https://i.imgur.com/Lkv5qVK.png" alt="Step 3 – Chatbot response" width="80%" style="border-radius: 12px;">
-  <br>
-  <em>Step 3: Receiving a contextual response from the chatbot.</em>
-</p>
-
-<!---
-<h3 id="automated-email-inquire">📧 Automated Email Inquiry</h3>
-
-<h4> User Guide </h4>
---->
 
 ---
 
@@ -436,7 +289,7 @@ You can access PinPoint by pressing the button below or by manually entering the
 
 <p align="center">
   <a href="https://juandergo.aratilismk.com/">
-    <img src="https://img.shields.io/badge/-🌏%20JuanderGo-orange?style=for-the-badge" alt="JuanderGo" />
+    <img src="https://img.shields.io/badge/-📍%20PinPoint-maroon?style=for-the-badge" alt="PinPoint" />
   </a>
 </p>
 
